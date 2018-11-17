@@ -1,3 +1,12 @@
 api_platform:
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
+    title: API Dinnertime
+    version: 1.0.0
+    description: |
+        Api para o trabalho do curso Análise e Desenvolvimento de Sistemas, disciplina Análise II e Banco de Dados.
+    swagger:
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
