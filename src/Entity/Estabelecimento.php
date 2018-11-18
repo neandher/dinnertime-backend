@@ -9,10 +9,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EstabelecimentoRepository")
- * @ApiResource(
- *     normalizationContext={"groups": {"estabelecimento_read"}},
- *     denormalizationContext={"groups": {"estabelecimento_write", "usuario_write"}}
- * )
  */
 class Estabelecimento
 {
@@ -26,21 +22,21 @@ class Estabelecimento
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_write"})
+     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_register"})
      */
     private $nome;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_write"})
+     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_register"})
      */
     private $endereco;
 
     /**
      * @ORM\Column(type="string", length=64)
      * @Assert\NotBlank()
-     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_write"})
+     * @Groups({"estabelecimento_read", "estabelecimento_write", "usuario_register"})
      */
     private $telefone;
 

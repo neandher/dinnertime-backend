@@ -2,17 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UsuarioRepository")
- * @ApiResource(
- *     normalizationContext={"groups": {"usuario_read"}},
- *     denormalizationContext={"groups": {"usuario_write"}}
- * )
  */
 class Usuario implements UserInterface
 {
@@ -56,7 +51,7 @@ class Usuario implements UserInterface
      * @ORM\ManyToOne(targetEntity="App\Entity\Estabelecimento", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      * @Assert\Valid()
-     * @Groups({"usuario_write"})
+     * @Groups({"usuario_register"})
      */
     private $estabelecimento;
 

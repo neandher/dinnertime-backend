@@ -1,0 +1,21 @@
+App\Entity\Usuario:
+  attributes:
+    normalization_context:
+      groups: ['usuario_read']
+    denormalization_context:
+      groups: ['usuario_write']
+  collectionOperations:
+    get: ~
+    register:
+      method: 'POST'
+      path: '/register.{_format}'
+      controller: 'App\Controller\RegisterController'
+      denormalization_context:
+        groups: ['usuario_write', 'usuario_register']
+
+App\Entity\Estabelecimento:
+  attributes:
+    normalization_context:
+      groups: ['estabelecimento_read']
+    denormalization_context:
+      groups: ['estabelecimento_write']
