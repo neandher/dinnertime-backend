@@ -6,6 +6,7 @@ App\Entity\Usuario:
       groups: ['usuario_write']
   collectionOperations:
     get: ~
+    post: ~
     register:
       method: 'POST'
       path: '/register.{_format}'
