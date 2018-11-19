@@ -23,11 +23,6 @@ class Cliente
     private $nome;
 
     /**
-     * @ORM\Column(type="string", length=40)
-     */
-    private $cpf;
-
-    /**
      * @ORM\Column(type="string", length=120)
      */
     private $email;
@@ -50,18 +45,6 @@ class Cliente
     public function setNome(string $nome): self
     {
         $this->nome = $nome;
-
-        return $this;
-    }
-
-    public function getCpf(): ?string
-    {
-        return $this->cpf;
-    }
-
-    public function setCpf(string $cpf): self
-    {
-        $this->cpf = $cpf;
 
         return $this;
     }

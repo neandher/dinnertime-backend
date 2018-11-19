@@ -15,7 +15,6 @@ class ClienteFixture extends BaseFixture
             $cliente
                 ->setNome($this->faker->name)
                 ->setEmail($this->faker->email)
-                ->setCpf($this->faker->cpf(false))
                 ->setTelefone($this->faker->phoneNumber);
         });
 

@@ -6,7 +6,7 @@
 -- COMANDOS PARA CRIAÇÃO DE TODAS AS TABELAS
 --
 
-CREATE TABLE cliente (id INT NOT NULL, nome VARCHAR(255) NOT NULL, cpf VARCHAR(40) NOT NULL, email VARCHAR(120) NOT NULL, telefone VARCHAR(120) NOT NULL);
+CREATE TABLE cliente (id INT NOT NULL, nome VARCHAR(255) NOT NULL, email VARCHAR(120) NOT NULL, telefone VARCHAR(120) NOT NULL);
 CREATE TABLE estabelecimento (id INT NOT NULL, nome VARCHAR(255) NOT NULL, endereco VARCHAR(255) NOT NULL, telefone VARCHAR(64) NOT NULL);
 CREATE TABLE horario (id INT NOT NULL, estabelecimento_id INT NOT NULL, dia_semana SMALLINT NOT NULL, horario_inicio TIME NOT NULL, horario_fim TIME NOT NULL);
 CREATE TABLE local_mesa (id INT NOT NULL, estabelecimento_id INT NOT NULL, descricao VARCHAR(255) NOT NULL);
@@ -48,11 +48,11 @@ ALTER TABLE usuario ADD CONSTRAINT FK_2265B05D4DBB2654 FOREIGN KEY (estabelecime
 -- INSERE DADOS EM CLIENTE
 --
 INSERT INTO `cliente`
-VALUES (1, 'Regina Luara Bezerra', '61587904608', 'madalena.quintana@yahoo.com', '(99) 4224-4619'),
-       (2, 'Dr. Ian Agostinho Martines', '62857765630', 'fatima.beltrao@gmail.com', '(82) 90499-9882'),
-       (3, 'Beatriz Camacho Garcia Jr.', '21200215621', 'molina.madalena@hotmail.com', '(51) 96099-5022'),
-       (4, 'Felipe Dias', '63577385146', 'joao.dasilva@bezerra.com', '(34) 3897-5311'),
-       (5, 'Sr. Sebastião Brito Lozano Filho', '54683482924', 'esteves.joaquin@rico.com', '(53) 3032-7326');
+VALUES (1, 'Regina Luara Bezerra', 'madalena.quintana@yahoo.com', '(99) 4224-4619'),
+       (2, 'Dr. Ian Agostinho Martines', 'fatima.beltrao@gmail.com', '(82) 90499-9882'),
+       (3, 'Beatriz Camacho Garcia Jr.', 'molina.madalena@hotmail.com', '(51) 96099-5022'),
+       (4, 'Felipe Dias', 'joao.dasilva@bezerra.com', '(34) 3897-5311'),
+       (5, 'Sr. Sebastião Brito Lozano Filho', 'esteves.joaquin@rico.com', '(53) 3032-7326');
 
 --
 -- INSERE DADOS EM ESTABELECIMENTO
